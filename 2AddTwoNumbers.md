@@ -157,7 +157,7 @@ func addTwoNodes(addedNode, l1, l2 *ListNode, carryUpFlag bool) {
 - addedNodeをaddedに変更。`added := dummy`から、`added`がノードであることを推測できるから。
 - carryUpFlagをcarryUpに変更。`if carryUpFlag`より`if carryUp`の方が自然だと思った。
 
-```
+```Go
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     dummy := &ListNode{Val: -1, Next: nil}
     added := dummy
