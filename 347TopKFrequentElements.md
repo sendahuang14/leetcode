@@ -8,7 +8,6 @@
 - テストケースで細かいミスを修正した後に一発でACしたのは嬉しかった
 
 ```Go
-// Implement heap.Interface
 type numCount struct {
     n int
     cnt int
@@ -31,7 +30,6 @@ func (h *numCountMinHeap) Pop() any {
 
 func (h numCountMinHeap) top() numCount { return h[0] }
 
-// Solution
 func topKFrequent(nums []int, k int) []int {
     numCntHashMap := make(map[int]int)  // {num: cnt}
     for _, n := range nums {
@@ -69,7 +67,6 @@ func topKFrequent(nums []int, k int) []int {
 - 問題文ではfrequencyという単語が使われいたので、cntからfreqに変更した
 
 ```Go
-// Implement heap.Interface
 type numFrequency struct {
     n int
     freq int
@@ -92,7 +89,6 @@ func (h *numFreqMinHeap) Pop() any {
 
 func (h numFreqMinHeap) top() numFrequency { return h[0] }
 
-// Solution
 func topKFrequent(nums []int, k int) []int {
     numFreqHashMap := make(map[int]int) // {num: freq}
     for _, n := range nums {
